@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "544ccecc-288a-4e8f-ac9c-6500c505f96c": {
+      "ProjectGuid": "544ccecc-288a-4e8f-ac9c-6500c505f96c",
+      "DisplayName": "greenTea",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - greenTea</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/Features-Boxed.css">
+    <link rel="stylesheet" href="~/css/Footer-Dark.css">
+    <link rel="stylesheet" href="~/css/Header-Blue.css">
+    <link rel="stylesheet" href="~/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/css/Animated-Type-Heading.css">
+    <link rel="stylesheet" href="~/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="~/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dekko&amp;display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body class="position-relative " style="font-family: Dekko, serif;">
+    <header style="font-family: Dekko, serif;">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12 offset-lg-0 text-center d-flex justify-content-lg-center" style="background: #fff;">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand d-flex  align-self-end  align-items-end" style="color: rgb(25,135,84); font-size: 43px; font-style: italic; position:sticky">
+                        <img src="~/media/greenTea.png" style="width: 122px;">
+                        <h4 class="text-end align-items-end" style="font-weight: bold;font-size: 46px;height: 59px;">green</h4>                        
+                        <h4 class="d-lg-flex align-items-end" style="font-weight: bold; font-size: 59px; color: rgb(220,53,69);">T</h4>
+                        <h4 class="align-items-end" style=" font-weight: bold; font-size: 59px; color: rgb(255,193,7);">e</h4>
+                        <h4 class="align-items-end" style=" font-weight: bold; font-size: 59px; color: rgb(13,110,253);">a</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg sticky-top d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center navigation-clean-search" style="background: linear-gradient(97deg, #00E4D0, #4D90E5), #6AbFdC;height: 74px;position: sticky;border-bottom: 10px solid #fff;">
+            <a class="navbar-brand"></a>
+            <div class="container ">
+               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon" style="width: 35px;border-bottom-color: rgba(238,242,8,0);box-shadow: 0px 0px;"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse text-center d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-1" style="height: 60px;font-weight: bold;font-size: 23px;color: #fff;position: relative;bottom: -25px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill " style="color: #fff;background: #03CB8F;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Index">HOME</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #9CC624;font-size: 23px;margin: 9px;" asp-area="" asp-controller="CardTables" asp-action="Index">PICTOGRAMA</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill text-nowrap" style="color: #fff;background: #0d94f5;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Wnoise">White Noise</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FFA012;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Categorias" asp-action="Index">CATEGORIA</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FF7223;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="containerfghfh">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="mt-5 footer-dark ">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="color: #5AAFCC;">Serviços</h3>
+                    <ul>
+                        <li><a asp-area="" asp-controller="CardTables" asp-action="Index">Pictogramas</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Wnoise" >White Noise</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="color: #5AAFCC;">Sobre</h3>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Faq">FAQ</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Sobre">Time</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <p class="copyright">Green TEA © 2022</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.filterizr.min.js"></script>
+
+    <!--FilterizR-->
+    <script>
+        const filterizr = $('.filter-container').filterizr({
+            controlsSelector: '.filtr-controls',
+            gridItemsSelector: '.filtr-item',
+            spiner: {
+                enabled: true
+            }
+        })
+        $("#shuffle").click(() => {
+            filterizr.filterizr('shuffle')
+        })
+        const sortFilterizr = (order) => {
+            filterizr.filterizr('sort', $("select: selected").val(), order)
+        }
+        $("#asc-btn").click(() => {
+            sortFilterizr('asc')
+        })
+        $("#des-btn").click(() => {
+            sortFilterizr('des')
+        })
+
+    </script>
+    <!--FilterizR-->
+    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/Animated-Type-Heading.js"></script>
+    <script src="~/js/bs-init.js"></script>
+    <script src="~/js/vanilla-zoom.js"></script>
+    <script src="~/js/theme.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

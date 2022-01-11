@@ -1,0 +1,62 @@
+﻿@model IEnumerable<greenTea.Models.CardTable>
+
+@{
+    ViewData["Title"] = "Index";
+
+    List<Categoria> categotias = new List<Categoria>();
+    List<string> nomes = new List<string>();
+
+}
+
+<hr />
+<br />
+<div class="container justify-content-center align-items-center ">
+    <div class="container d-flex justify-content-around align-items-center">
+        <h1>Tabela Pictogramas</h1> <a asp-action="Index2" class="btn btn-primary">Editar</a>
+        
+
+    </div>
+    <hr />
+
+    <div class="filters position-sticky">
+
+        <!--Menu de opções-->
+        <ul class="btn-group simplefilter d-flex  flex-wrap p-2">
+            <li class="btn btn-secondary m-1 filtr-controls rounded-pill" data-filter="all">Todos</li>
+
+            @foreach (var item in Model)
+            {
+                if (!nomes.Contains(item.Categoria.Nome))
+                {
+                    nomes.Add(item.Categoria.Nome);
+        <li class="btn  m-1 filtr-controls rounded-pill text-white btn-primary" data-filter="@Html.DisplayFor(modelItem => item.Categoria.Nome)">
+            @Html.DisplayFor(modelItem => item.Categoria.Nome)
+        </li>
+                }
+            }
+        </ul>
+        <!--Menu de opções-->
+    </div>
+
+    <!--Cards-->
+    <div class="cards d-flex row filter-container ml-sm-2 ml-md-3 ml-4 ">
+
+        @foreach (var item in Model)
+        {
+            <div class="card filtr-item col-3 col-sm-3 col-lg-4 card-edit" style="height: 220px;background: @Html.DisplayFor(modelItem => item.Categoria.Cor)"
+                 data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value" data-author="H">
+                <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
+                <div class="filtr-title card-edit-textos">
+                    <p>@Html.DisplayFor(modelItem => item.Nome)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<greenTea.Models.CardTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tabela Pictogramas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar Novo</a> | <a asp-action="Index" class="btn btn-primary">Voltar</a>
+</p>
+<hr>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Img)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Img)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-user-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-info-circle"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
